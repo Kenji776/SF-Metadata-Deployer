@@ -1,0 +1,50 @@
+//JSON (mostly, supports comments obviously) configuration file for the utility. 
+{	
+	//username of the org to interact with.
+	"username": "your_user@someorg.com",
+	
+	//the full absolute path of your project root. The folder that contains all the downloaded Salesforce data/metadata. Seprate folders with two \\ instead of one.
+	//Should directly contain your 'objects' and 'customMetadata' folder. 
+	//by default it would be something like "C:\\Users\\Your_Username\\Documents\\ProjectName\\force-app\\main\\default"
+	"projectRoot": "C:\\Users\\YourUserOrWhatever\\Documents\\YourSalesforceProjectFolder\\force-app\\main\\default",
+	
+	//where to read the source .csv files from
+	"sourceDir": "input",
+	
+	//where to write the cleaned output files to be imported to
+	"destDir": "output",
+	
+	//where to write the generated package.xml files
+	"packagesDir": "packages",
+	
+	//what type of files should be scanned for in the sourceDir to process
+	"importFileType": ".csv",
+	
+	//if your import files contains a 'DeveloperName' column, as would come from an export of metadata via query/report, etc the script can automatically rename it to 'Name'
+	"renameDeveloperNameCol": true,
+	
+	//if your import files contains a 'Label' column, as would come from an export of metadata via query/report, etc the script can automatically remove it to prevent errors
+	"removeLabelCol": true,
+	
+	//The fields for the custom metadata types have to present on the local file system for the generation command to run. The script can automatically download them as needed.
+	"fetchMetadataDefinition": true,
+	
+	//If feching metadata definition should this only be done if they are found not to exist at all (false), or force re-download every time (true). Disregarded if fetchMetadataDefinition is false
+	"forceFetchExistingMetadata": true,
+	
+	//Should the script automatically create package.xml files. This must be true for automatic deployment.
+	"createPackageXML": true,
+	
+	//Should the script automatically deploy the generated metadata?
+	"autoDeployPackage": true,
+	
+	//Should the metadata type for an import file be deduced from it's filename (filename must be the name of the metadata type exactly excluding file extension)?
+	//currently this is the only choice. Later specifying file names to metadata types in a separate file may be supported.
+   	"getMetadataTypesFromFiles":true,
+	
+	//when the script encounters an error should it pause and wait for a key press from the user
+	"pauseOnError":true,
+	
+	//what is the maximum number of members to include in each generated package.xml file?
+	"maxMembersPerPackage":1000
+}

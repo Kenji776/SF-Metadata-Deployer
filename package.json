@@ -1,0 +1,16 @@
+{
+  "name": "metadataimport",
+  "version": "1.0.0",
+  "description": "Steps\r 1) Export XLS or CSV version of metadata\r 2) Rename DeveloperName column to 'name' if present. Otherwise designate a column as 'name'. \r    - Values in the column should not start with a number or spaces. Should be a valid API name\r 2b) If last column is empty with only a header, remove it.\r 3) Remove 'label' column if present.\r 4) Save as base CSV (not UTF-8), name file corresponding to the type of metadata its creating/importing.\r 5) Use the command \"sfdx force:cmdt:record:insert --filepath import/[filename.csv] --typename [customMetaDataType__mdt] >> log.txt\"",
+  "main": "importer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csvtojson": "^2.0.10",
+    "json-2-csv": "^5.0.1"
+  }
+}

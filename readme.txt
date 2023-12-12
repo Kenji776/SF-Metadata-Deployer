@@ -1,16 +1,22 @@
-- What is this?
+-- What is this?
 
 This is a node.js application for importing Salesforce custom metadata records created from a CSV file. It dramatically simplifies the metadata import/creation process.
 
-- Why does it exist? What problem does it solve?
+-- Why does it exist? What problem does it solve?
 
 Salesforce by default does not provide any utility for importing custom metadata records. When moving from org to org or simply generating initial data it can be painful to try and create/deploy those records. The utility allows you to easily export your metadata from one org or create new and get it into your desired org without as little pain as possible.
 
-- How do I use it?
+-- How do I use it?
 
-You simply place your CSV files in the 'sourceDir' (as specified in your config.json file), configure the rest of the parameters as needed in the config.json, put this application folder somewhere inside your Salesforce 
+You simply place your CSV files in the 'sourceDir' (as specified in your config.json file), configure the rest of the parameters as needed in the config.json, put this application folder somewhere inside your Salesforce project folder and run the metadata_deployer.bat (windows) or via command line with 'node metadata_deployer.js'. 
 
-- What exactly, step by step does it do?
+--Prerequisites
+
+To use this script you must have the following.
+- NodeJs installed
+- A configured local Salesforce project
+
+-- What exactly, step by step does it do?
 
 The functional steps the script performs are as follows
 1) Reads each .csv file from the folder specified in the config.json

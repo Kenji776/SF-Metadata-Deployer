@@ -24,12 +24,3 @@ The functional steps the script performs are as follows
 
 
 	
-
-Ideas
-- Possible feature to automatically update with missing picklist values?
-- Autostrip Undefined
-
-    <values>
-        <field>undefined</field>
-        <value xsi:type="xsd:string">undefined</value>
-    </values>

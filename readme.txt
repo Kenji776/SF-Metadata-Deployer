@@ -8,7 +8,7 @@ Salesforce by default does not provide any utility for importing custom metadata
 
 - How do I use it?
 
-You simply place your CSV files in the 'sourceDir', configure the rest of the parameters as needed in the config.json, put this application folder somewhere inside your Salesforce 
+You simply place your CSV files in the 'sourceDir' (as specified in your config.json file), configure the rest of the parameters as needed in the config.json, put this application folder somewhere inside your Salesforce 
 
 - What exactly, step by step does it do?
 

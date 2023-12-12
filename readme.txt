@@ -4,7 +4,12 @@ This is a node.js application for importing Salesforce custom metadata records c
 
 -- Why does it exist? What problem does it solve?
 
-Salesforce by default does not provide any utility for importing custom metadata records. When moving from org to org or simply generating initial data it can be painful to try and create/deploy those records. The utility allows you to easily export your metadata from one org or create new and get it into your desired org without as little pain as possible.
+Salesforce by default does not provide a simple for importing custom metadata records (that I'm aware of). When moving from org to org or simply generating initial data it can be painful to try and create/deploy those records. The utility allows you to easily export your metadata from one org or create new and get it into your desired org without as little pain as possible.
+
+-- But isn't there a metadata deployer for connected orgs? Couldn't you just download your metadata records in one org and copy/push them with SFDX into another?
+
+In many cases yes. However, this was born our of a need to move metadata between two non connected orgs, and additionally only a subset of the metadata was wanted that would be provided via a query. Since you cannot
+use SOQL in your retreive requests a different tool was needed. This allows you to use workbench (or some other utility) to craft a SOQL query to fetch only the metadata you want, export that as a CSV then import those results into another org. The default tools don't have that kind of flexibility.
 
 -- How do I use it?
 

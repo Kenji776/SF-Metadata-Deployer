@@ -13,12 +13,13 @@ use SOQL in your retreive requests a different tool was needed. This allows you 
 
 -- How do I use it?
 
-You simply place your CSV files in the 'sourceDir' (as specified in your config.json file), configure the rest of the parameters as needed in the config.json, put this application folder somewhere inside your Salesforce project folder and run the metadata_deployer.bat (windows) or via command line with 'node metadata_deployer.js'. 
+You simply place your CSV files in the 'sourceDir' (as specified in your config.json file), configure the rest of the parameters as needed in the config.json, put this application folder somewhere inside your Salesforce project folder. Install the dependencies by running the command 'npm install' from a command prompt in the application folder (folder with package.json in it). Run the metadata_deployer.bat (windows) or via command line with 'node metadata_deployer.js'. 
 
 --Prerequisites
 
 To use this script you must have the following.
 - NodeJs installed
+- Node Package Manager Installed
 - A configured local Salesforce project
 
 -- What exactly, step by step does it do?
